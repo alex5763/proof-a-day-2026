@@ -72,7 +72,7 @@ proof-a-day/
 ├── main.tex
 ├── Makefile 
 └── README.md
-
+```
 Each file contains dated entired. Compilation is handled using `latexmk`. 
 
 ---
@@ -116,4 +116,4 @@ sudo apt install texlive-latex-extra make
 # Verify installation 
 pdflatex --version
 make --version
-
+```
