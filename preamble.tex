@@ -1,0 +1,31 @@
+% ===== Packages =====
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{mathtools}
+
+\usepackage[hidelinks]{hyperref}
+
+% ===== Theorem environments =====
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section] % numbering tied to sections
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+% ===== Daily entry header =====
+% Usage: \dayentry{2026-01-01}{Topic}{Green}
+\newcommand{\dayentry}[3]{%
+  \subsubsection*{#1 \hfill \textnormal{#2 \;(\,#3\,)}}%
+  \addcontentsline{toc}{subsubsection}{#1 --- #2}%
+}
+
