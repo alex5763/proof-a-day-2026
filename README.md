@@ -62,7 +62,7 @@ This years emphasis is on correctness, clarity, and understanding — not origin
 ---
 
 ## Repository Structure
-
+```text
 proof-a-day/
 ├── 2026/
 │   ├── week01.tex
@@ -108,7 +108,7 @@ Any change to a `.tex` file automatically triggers a rebuild.
 - **TeX Live** (or equivalent LaTeX distribution)
 - **GNU Make**
 - **pdflatex** (included with TeX Live)
-- (optional) **[inotify-tools]**(https://github.com/inotify-tools/inotify-tools) 
+- (optional) [inotify-tools](https://github.com/inotify-tools/inotify-tools) 
 
 On Ubuntu/Debian:
 ```bash
