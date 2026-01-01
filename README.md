@@ -73,7 +73,7 @@ proof-a-day/
 ├── Makefile 
 └── README.md
 ```
-Each file contains dated entired. Compilation is handled using `latexmk`. 
+Each file contains dated entired. Compilation is handled using `TeX Live`. 
 
 ---
 
@@ -110,6 +110,11 @@ Any change to a `.tex` file automatically triggers a rebuild.
 - **pdflatex** (included with TeX Live)
 - (optional) [inotify-tools](https://github.com/inotify-tools/inotify-tools) 
 
+#### Required OS
+
+This project is being built and compiled on a `Ubuntu 24.04` system. While 
+you should be able to compile in other linux systems, you may encourter errors. 
+
 On Ubuntu/Debian:
 ```bash
 sudo apt install texlive-latex-extra make
@@ -117,3 +122,20 @@ sudo apt install texlive-latex-extra make
 pdflatex --version
 make --version
 ```
+
+### Building the document 
+To build `main.text`, run the following: 
+```bash
+cd /path/to/proof-a-day-2026 
+make <target>
+```
+If `<target>` is left blank the defauly target will be built.
+There are 3 optional arguments for `<target>`: 
+1. `clean`
+    - Remove aux/log files
+2. `distclean` 
+    - Remove everything including the PDF
+3. `watch` (Requires `inotify-tools`)
+    - Automatic rebuild while editing 
+
+
