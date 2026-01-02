@@ -1,10 +1,16 @@
 \subsection{Week 1 (Jan 1--Jan 7)}
 
-\dayentry{2026-01-01}{Inequalities}
-\begin{lemma}
-For all real numbers $a,b$, we have $(a+b)^2 \le 2a^2 + 2b^2$.
-\end{lemma}
+\dayentry{2026-01-01}{Division}
+\begin{theorem} 
+	If $a | c$ and $b | c$ and $\gcd(a, b) = d$, then $ab | cd$. $a, b, c \in \mathbb{Z}$
+\end{theorem}
 \begin{proof}
-Expand and use $2ab \le a^2 + b^2$.
+	As $d = \gcd(a, b)$, we have that $d = au + bv$ for some $u, v \in \mathbb{Z}$. We now have that $cd = c(au + bv) = cau + cbv$. Since $a | c$ and $b | c$, $c = ax = by$ for some $x, y \in \mathbb{Z}$. Substituing $c$ results in $cd = cau +cbv = (by)au + (ax)bv = (ab)(yu + xv)$. As $u, v, x, y \in \mathbb{Z}$, $yu +xv \in \mathbb{Z}$. By definition of divisibility, $ab | cd$.  
 \end{proof}
+%\dayentry{2026-01-01}{Inequalities}
+%\begin{theorem}
+%	Let $a$ and $b$ be integers, not both $0$, and let $d$ be their greatest common divisor. Then there exists (not necessarily unique) integers $u$ and $v$ such that $d = au + bv$. 
+%\end{theorem}
+%\begin{proof}
+%\end{proof}
 
