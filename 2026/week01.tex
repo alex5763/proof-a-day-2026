@@ -1,16 +1,21 @@
 \subsection{Week 1 (Jan 1--Jan 7)}
 
-\dayentry{2026-01-01}{Division}
+\dayentry{2026-01-01}{Divisibility}
 \begin{theorem} 
 	If $a | c$ and $b | c$ and $\gcd(a, b) = d$, then $ab | cd$. $a, b, c \in \mathbb{Z}$
 \end{theorem}
 \begin{proof}
 	As $d = \gcd(a, b)$, we have that $d = au + bv$ for some $u, v \in \mathbb{Z}$. We now have that $cd = c(au + bv) = cau + cbv$. Since $a | c$ and $b | c$, $c = ax = by$ for some $x, y \in \mathbb{Z}$. Substituing $c$ results in $cd = cau +cbv = (by)au + (ax)bv = (ab)(yu + xv)$. As $u, v, x, y \in \mathbb{Z}$, $yu +xv \in \mathbb{Z}$. By definition of divisibility, $ab | cd$.  
 \end{proof}
-%\dayentry{2026-01-01}{Inequalities}
-%\begin{theorem}
-%	Let $a$ and $b$ be integers, not both $0$, and let $d$ be their greatest common divisor. Then there exists (not necessarily unique) integers $u$ and $v$ such that $d = au + bv$. 
-%\end{theorem}
-%\begin{proof}
-%\end{proof}
 
+\dayentry{2026-01-02}{Divisibility}
+\begin{theorem}
+	If $a|bc$ and $\gcd(a, b) = 1$, then $a|c$. 
+\end{theorem}
+\begin{proof}
+	Assume that $a|bc$ and $\gcd(a, b) = 1$. As $a$ and $b$ are relatively prime, $au + bv = 1$ for some $u, v \in \mathbb{Z}$. If we multiply $au + bv = 1$ by $c$, then we have $cau + cbv = c$. As $a|bc$, $bc = ax$ for some $x \in \mathbb{Z}$. Now, we have that 
+	\[
+		c = cau + cbv = cau + bcv = cau + (ax)v = a(cu + xv)
+	\]
+	Since $c, u, x, v \in \mathbb{Z}$ and by the definition of divisibility, $a|c$. 
+\end{proof}
