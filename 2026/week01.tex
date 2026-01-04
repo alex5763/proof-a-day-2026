@@ -19,3 +19,15 @@
 	\]
 	Since $c, u, x, v \in \mathbb{Z}$ and by the definition of divisibility, $a|c$. 
 \end{proof}
+
+\dayentry{2026-01-03}{gcd}
+\begin{theorem}
+	If $\gcd(a, c) = 1$ and $\gcd(b, c) = 1$, then $\gcd(ab, c) = 1$. 
+\end {theorem} 	
+\begin{proof}
+	By way of contradiction, assume that $\gcd(ab, c) \neq 1$. Thus, there exists a prime $p$ such that 
+	\[
+		p | ab \text{ and } p|c.
+	\]
+	Since $p$ is prime, $p | a$ or $p | b$. If $p | a$, then $\gcd{a, c} \geq p > 1$, which contradiscts the assumption that $\gcd(a, c) = 1$. If $p | b$, then $\gcd{b, c} \geq p > 1$, which contradicts the assumption that $\gcd(b, c) = 1$. Therefore $ab$ and $c$ share no such prime factors $p$, so $\gcd(ab, c) = 1$. 
+\end{proof}
