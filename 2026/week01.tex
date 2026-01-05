@@ -20,7 +20,7 @@
 	Since $c, u, x, v \in \mathbb{Z}$ and by the definition of divisibility, $a|c$. 
 \end{proof}
 
-\dayentry{2026-01-03}{gcd}
+\dayentry{2026-01-03}{Divisibility}
 \begin{theorem}
 	If $\gcd(a, c) = 1$ and $\gcd(b, c) = 1$, then $\gcd(ab, c) = 1$. 
 \end {theorem} 	
@@ -30,4 +30,18 @@
 		p | ab \text{ and } p|c.
 	\]
 	Since $p$ is prime, $p | a$ or $p | b$. If $p | a$, then $\gcd{a, c} \geq p > 1$, which contradiscts the assumption that $\gcd(a, c) = 1$. If $p | b$, then $\gcd{b, c} \geq p > 1$, which contradicts the assumption that $\gcd(b, c) = 1$. Therefore $ab$ and $c$ share no such prime factors $p$, so $\gcd(ab, c) = 1$. 
+\end{proof}
+
+\dayentry{2026-01-04}{Rings}
+\begin{theorem}
+	If $a + b = a + c$ in a ring $R$, then $b = c$. 
+\end{theorem}
+\begin{proof}
+	Assume that for $a, b, c \in R$, $a + b = a + c$. If we add $-a$ and by using the associtivity property of rings and negatives, we can show that 
+	\begin{align*}
+		-a + (a + b) = -a + (a + c) \\
+		(-a + a) + b = (-a + a) + c \\
+		0_R + b = 0_R + c \\ 
+		b = c
+	\end{align*}
 \end{proof}
