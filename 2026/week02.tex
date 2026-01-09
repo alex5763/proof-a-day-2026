@@ -1,0 +1,29 @@
+\subsection{Week 2 (Jan 8--Jan 14)}
+
+\dayentry{2026-01-08}{Rings}
+\begin{theorem} 
+	Let $f:R \to S$ be a homomorphism of rings, Then 
+	\begin{align*}
+		&\text{(1)}\quad f(0_R) = 0_S \\
+		&\text{(2)}\quad f(-a) = -f(a) \quad \forall a \in R \\
+		&\text{(3)}\quad f(a - b) = f(a) - f(b) \quad \forall a,b \in R
+	\end{align*}
+\end{theorem} 
+\begin{proof} 
+	(1) As $f$ is a homomorphism of rings, we have the following: 
+	\begin{align*} 
+		f(0_R) + f(0_R) &= f(0_R + 0_R) \\
+		f(0_R) + f(0_R) &= f(0_R) \quad [0_R + 0_R = 0_R \,\text{in} \, R] \\
+		f(0_R) + f(0_R) & = f(0_R) + 0_S \, [f(0_R) + 0_S = f(0_R)\, \text{in} \, S] \\
+		f(0_R) &= 0_S
+	\end{align*} 
+
+	(2) Note that: $f(a) + f(-a) = f(a + (-a)) = f(0_R) = 0_S$ by (1) and $f$ is a homomorphism. So, $f(-a)$ is a solution to the equation $f(a) + x = 0_S$. But as $S$ is a ring, there exists only one unique solution to this equation which is $-f(a)$. Therefore by [theorem to be proved at a later date], $f(-a) = -f(a)$. 
+
+	(3) As $f$ is a homomorphism and by (2), we have the following: 
+	\begin{align*}
+		f(a - b) &= f(a + (-b)) \\
+		&= f(a) + f(-b) \\
+		&= f(a) - f(b) 
+	\end{align*} 
+\end{proof}
