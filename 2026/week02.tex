@@ -27,3 +27,21 @@
 		&= f(a) - f(b) 
 	\end{align*} 
 \end{proof}
+
+\dayentry{2026-01-09}{Rings}
+\begin{theorem} 
+	Let $f: R \to S$ be a homomorphism of rings. If $R$ is a ring with identity and $f$ is surjective, then 
+	\begin{align*}
+		&\text{(1)}\quad S \, \text{is a ring with identity}\, f(1_R). \\
+		&\text{(2)}\quad \text{Whenever }  u \, \text{is a unit in} \, R, \, \text{then} \, f(u) \, \text{is a unit in} \, S \, \text{and} \, f(u)^{-1} = f(u^{-1}).  
+	\end{align*}
+\end{theorem}
+\begin{proof} 
+	(1) Let $s$ be some element in $S$. As $f$ is surjective, there exists some $r \in R$ such that $f(r) = s$. Then we have that 
+	\begin{align*}
+		s * f(1_R) = f(r)f(1_R) = f(r * 1_R) = f(r) = s
+	\end{align*}
+	Similarly $f(1_R) * s = s$. Therefore $1_S = f(1_R)$.
+
+	(2) As $u$ is a unit, there exists some $v \in R$ such that $uv = 1_R = vu$. By (1), we have that $f(u)f(v) = f(uv) = f(1_R) = 1_S$. Similarly, $vu = 1_R$ which implies that $f(v)f(u) = 1_S$. Therefore $f(u)$ is a unit in $S$ with inverse $f(v)$. Said differently $f(u)^{-1} = f(v)$. As $v$ is the inverse of $u$ ($v = u^{-1}$), we see that $f(u)^{-1} = f(v) = f(u^{-1})$. 
+\end{proof} 
