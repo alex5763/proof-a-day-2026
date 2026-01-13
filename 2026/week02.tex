@@ -61,3 +61,13 @@ If $W = e_1,..., e_n$ is a closed walk in $D$, then $W$ contains a coherent cycl
 \begin{proof}
 Consider the subgraph $H$ of edges $e_1,..., e_n$. Thus, no vertex is a source or sink in $H$. Now let $P$ be a longest path in $H$. Let $v$ denote the head of $P$. Because no vertex is a source or sink in $H$, there is $e=(v,w)$ for some $w$. Because $P$ has a maximum length $w \in P$, $P \cup (v,w)$ contains a coherent cycle. 
 \end{proof}
+
+\dayentry{2026-01-12}{Graphs} 
+\begin{theorem} \label{prop:WalkYieldsPath}
+If $u,v\in V(D)$ with $u\neq v$ and $W = e_1,..., e_n$ is a $uv$-walk. Then $W$ contains the edges of a $uv$-path. 
+\end{theorem}
+\begin{proof}
+\textbf{Base Case:} Say $n=1$. Because $W$ is a $uv$-walk, its one edge is a $uv$-path. 
+
+\noindent\textbf{Inductive Hypothesis:} Assume that for $W = e_1,..., e_n$, $W$ contains the edges of a $uv$-path. We need to show that there is a $uv$-path if $W = e_1,..., e_{n+1}$. Let $x_n$ be the head of $e_n$. If $v$ is contained within the $ux_n$-walk, then by the inductive hypothesis we are done. So, assume $v$ is not part of the $ux_n$-walk. By the inductive hypothesis, the $ux_n$-walk contains the edges of a $ux_n$-path. Adding $e_{n+1}$ to this $ux_n$-path makes a $uv$-path 
+\end{proof}
