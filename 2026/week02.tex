@@ -71,3 +71,16 @@ If $u,v\in V(D)$ with $u\neq v$ and $W = e_1,..., e_n$ is a $uv$-walk. Then $W$ 
 
 \noindent\textbf{Inductive Hypothesis:} Assume that for $W = e_1,..., e_n$, $W$ contains the edges of a $uv$-path. We need to show that there is a $uv$-path if $W = e_1,..., e_{n+1}$. Let $x_n$ be the head of $e_n$. If $v$ is contained within the $ux_n$-walk, then by the inductive hypothesis we are done. So, assume $v$ is not part of the $ux_n$-walk. By the inductive hypothesis, the $ux_n$-walk contains the edges of a $ux_n$-path. Adding $e_{n+1}$ to this $ux_n$-path makes a $uv$-path 
 \end{proof}
+
+\dayentry{2026-01-13}{Graphs} 
+\begin{theorem} \label{thm:StrongConnectNoCut}
+A directed graph D is strongly connected if and only if it has no coherent cut.  
+\end{theorem}
+\begin{proof}
+($\Rightarrow$) 
+Let $D$ be a directed graph that is strongly connected. By way of contradiction, assume there exists a coherent cut in D defined by $X \subseteq V(X)$, and with all edges in $\delta (X)$ having tails in $X$ without loss of generality. Because all edges in $\delta (D)$ point in the same direction, there would be no way to get from any vertex $ v \in V(D) - X$ to any vertex $x \in X$, so $D$ is not strongly connected, which is a contradiction. Thus, $D$ does not have a coherent cut. 
+\bigbreak
+\noindent 
+($\Leftarrow$)
+Let $D$ be a directed graph that is not strongly connected, so there exists two vertices $u, v \in V(D)$, such that there is no $uv$-path. Let $V_v \subseteq V(D)$ be the set of all vertices, $y$, for which there is a $yv$-path, and $V_u \subseteq V(D)$ be the set of all vertices, $x$ for which there is a $ux$-path. Let $M = V(D)-(V_v \cup V_u)$. Because there is no $uv$-path, $V_u \cap V_v = \emptyset$ by Theorem~\ref{prop:WalkYieldsPath}. Again by Theorem~\ref{prop:WalkYieldsPath}, all edges in $\delta (V_u)$ must going into $V_u$ by definition of $V_u, V_v$, and $M$. Thus, $\delta (V_u)$  is a coherent cut. 
+\end{proof}
