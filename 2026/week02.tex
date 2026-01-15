@@ -84,3 +84,11 @@ Let $D$ be a directed graph that is strongly connected. By way of contradiction,
 ($\Leftarrow$)
 Let $D$ be a directed graph that is not strongly connected, so there exists two vertices $u, v \in V(D)$, such that there is no $uv$-path. Let $V_v \subseteq V(D)$ be the set of all vertices, $y$, for which there is a $yv$-path, and $V_u \subseteq V(D)$ be the set of all vertices, $x$ for which there is a $ux$-path. Let $M = V(D)-(V_v \cup V_u)$. Because there is no $uv$-path, $V_u \cap V_v = \emptyset$ by Theorem~\ref{prop:WalkYieldsPath}. Again by Theorem~\ref{prop:WalkYieldsPath}, all edges in $\delta (V_u)$ must going into $V_u$ by definition of $V_u, V_v$, and $M$. Thus, $\delta (V_u)$  is a coherent cut. 
 \end{proof}
+
+\dayentry{2026-01-14}{Graphs} 
+\begin{theorem} \label{thm:CycleOrCut}
+    Every $e \in D$ is a coherent cycle or a coherent cut. 
+\end{theorem}
+\begin{proof}
+	Let $D$ be a directed graph. Let $e \in E(D)$. If e is in a coherent cycle, then we are done, so assume that $e$ is not in a coherent cycle, say $e=(u,v)$. Let $V_v \subseteq V(D)$ be the set of all vertices, $y$, for which there is a $vy$-path, $V_u \subseteq V(D)$ be the set of all vertices, $x$ for which there is a $xu$-path, and let $M = V(D)-(V_v \cup V_u)$. If there were a $vu$-walk, then by Theorem~\ref{prop:WalkYieldsPath}, there would be a coherent cycle containing $e$. So, it must be the case that there is no $vu$-walk, thus $V_u \cap V_v = \emptyset$. Again by Theorem~\ref{prop:WalkYieldsPath}, all edges in $\delta (V_u)$ must be going into $V_v \cup M$ by definition of $V_u, V_v$, and $M$, creating a coherent cut.
+\end{proof}
