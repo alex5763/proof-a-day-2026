@@ -92,3 +92,18 @@ Let $D$ be a directed graph that is not strongly connected, so there exists two 
 \begin{proof}
 	Let $D$ be a directed graph. Let $e \in E(D)$. If e is in a coherent cycle, then we are done, so assume that $e$ is not in a coherent cycle, say $e=(u,v)$. Let $V_v \subseteq V(D)$ be the set of all vertices, $y$, for which there is a $vy$-path, $V_u \subseteq V(D)$ be the set of all vertices, $x$ for which there is a $xu$-path, and let $M = V(D)-(V_v \cup V_u)$. If there were a $vu$-walk, then by Theorem~\ref{prop:WalkYieldsPath}, there would be a coherent cycle containing $e$. So, it must be the case that there is no $vu$-walk, thus $V_u \cap V_v = \emptyset$. Again by Theorem~\ref{prop:WalkYieldsPath}, all edges in $\delta (V_u)$ must be going into $V_v \cup M$ by definition of $V_u, V_v$, and $M$, creating a coherent cut.
 \end{proof}
+
+\dayentry{2026-01-15}{Graphs} 
+\begin{theorem} \label{thm:AcyclicPartialOrder}
+If $D$ is acyclic, then $\le$ is a partial order set on $V(D)$. 
+\end{theorem}
+\begin{proof}
+Let $D$ be a directed, acyclic graph. To show that $\le$ is a partial order set on $V(D)$, we must prove the following three properties.
+
+\noindent\textbf{Reflexive}: For any $u \in V(D)$, there is a length $0$ coherent $uu$-path, so $u \le u$. 
+
+\noindent\textbf{Anti-Symmetry}: Consider $u,v \in V(D)$. By way of contradiction, suppose $u \le v$ and $v \le u$, and $u \neq v$. So, there exists a $uv$-path, $P$, and a $vu$-path, $Q$, by the definition of $\le$. Now, $P \cup Q$ is a closed walk in $D$. So, there is a coherent cycle in $P \cup Q$ by Proposition 2, a contradiction. 
+
+\noindent\textbf{Transitivity}: Consider $u, v, w \in V(D)$. Suppose $u \le v$ and $v \le w$. So there is a $vu$-path and a $wv$-path. Because you can get from $w$ to $v$ and from $v$ to $u$ there must be a $wu$-walk. So, there is a $uw$-path by Proposition 3. Thus, $u \le w$.
+\noindent Thus, $\le$ is a partial order set set on $V(D)$. 
+\end{proof}
